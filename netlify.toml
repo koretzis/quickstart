@@ -12,3 +12,5 @@
 [build.environment]
   # This is the MOST IMPORTANT line. It tells Netlify which version of Hugo to use.
   HUGO_VERSION = "0.125.7"
+  # This is the new magic line that fixes the Sass error.
+  HUGO_ENABLE_DART_SASS = "true"
