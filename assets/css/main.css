@@ -1,0 +1,173 @@
+/*
+=================================================
+ MY CUSTOM STYLESHEET FOR A COZY & MINIMAL SITE
+=================================================
+*/
+
+/* 
+STEP 1: IMPORT COZY & PROFESSIONAL FONTS FROM GOOGLE FONTS
+-------------------------------------------------------------
+We're choosing:
+- 'Inter': A very clean, professional, and highly readable sans-serif for body text.
+- 'Lora': A soft, contemporary serif for headings to add a touch of cozy, academic warmth.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
+
+
+/* 
+STEP 2: OVERRIDE THE THEME'S DEFAULT COLORS
+-------------------------------------------------------------
+We are replacing the default stark black and white with a warmer,
+cozier palette that still feels professional.
+- Background: A very light, soft off-white.
+- Text: A dark grey instead of pure black for softer contrast.
+- Accent: A muted, dusty blue that is professional but not corporate.
+*/
+:root {
+    --bg-color: #f8f7f4;              /* Soft off-white background */
+    --primary-text-color: #333333;    /* Dark grey for main text */
+    --secondary-text-color: #5a5a5a;  /* Lighter grey for metadata */
+    --accent-color: #5a7d9a;           /* Dusty, muted blue for links */
+    --accent-text-color: #f8f7f4;      /* Text color for on-accent elements */
+    --code-bg-color: #e9e6e0;          /* A warm background for code blocks */
+    --border-color: #dcdcdc;          /* A light border color */
+}
+
+
+/* 
+STEP 3: APPLY THE NEW FONTS
+-------------------------------------------------------------
+Here we tell the browser to use the fonts we imported.
+*/
+body {
+    font-family: 'Inter', sans-serif; /* Use Inter for all body text */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lora', serif;      /* Use Lora for all headings */
+}
+
+
+/* 
+STEP 4: INCREASE WHITESPACE FOR A MINIMAL FEEL
+-------------------------------------------------------------
+Adding more space around the content makes the site feel less
+cramped and more minimal and focused.
+*/
+.container {
+    max-width: 800px;  /* A slightly wider container for better line length */
+    padding: 2rem 1.5rem; /* More vertical and horizontal padding */
+}
+
+.prose {
+    font-size: 1.1rem; /* Slightly larger base font size for readability */
+    line-height: 1.7;  /* More space between lines of text */
+}
+
+/* More space between paragraphs and headings */
+.prose > *+* {
+    margin-top: 1.5em; 
+}
+
+
+/* 
+STEP 5: SUBTLE TWEAKS FOR A POLISHED LOOK
+-------------------------------------------------------------
+Small details that enhance the professional feel.
+*/
+
+/* Make links less "loud" - remove underline until hover */
+.prose a {
+    text-decoration: none;
+    border-bottom: 2px solid var(--accent-color);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.prose a:hover {
+    background-color: #5a7d9a20; /* A very light wash of the accent color on hover */
+}
+
+/* Soften the borders on images */
+.prose img {
+    border-radius: 8px;
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 4rem;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.5rem; /* Space between nav items */
+  justify-content: center; /* Center the nav items */
+}
+
+.navbar a {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: var(--secondary-text-color);
+  text-decoration: none;
+  border-bottom: none; /* Remove the underline from our previous style */
+  transition: color 0.2s ease-in-out;
+}
+
+.navbar a:hover {
+  color: var(--accent-color);
+  background-color: transparent; /* Remove hover background */
+}
+
+
+/* --- Intro/Hero Section --- */
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 50vh; /* Make it take up a good portion of the screen height */
+}
+
+.intro-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-text-color);
+}
+
+.intro-subtitle {
+  font-size: 1.25rem;
+  color: var(--secondary-text-color);
+  max-width: 600px; /* Keep subtitle from getting too wide */
+  line-height: 1.6;
+}
+
+
+/* --- Social Links --- */
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.75rem; /* Space between icons */
+  justify-content: center;
+}
+
+.social-links a {
+  color: var(--primary-text-color);
+  font-size: 1.5rem; /* Icon size */
+  text-decoration: none;
+  border-bottom: none;
+  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  display: inline-block;
+}
+
+.social-links a:hover {
+  transform: translateY(-3px); /* A little "lift" effect on hover */
+  color: var(--accent-color);
+  background-color: transparent;
+}

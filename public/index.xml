@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stelios Anastasakis site</title>
+    <link>//localhost:1313/</link>
+    <description>Recent content on Stelios Anastasakis site</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 30 Jun 2025 19:02:07 +0300</lastBuildDate>
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About_me</title>
+      <link>//localhost:1313/posts/about_me/</link>
+      <pubDate>Mon, 30 Jun 2025 19:02:07 +0300</pubDate>
+      <guid>//localhost:1313/posts/about_me/</guid>
+      <description>&lt;p&gt;Stylianos (Stelios) Anastasakis is a technologist and researcher with a multifaceted background that bridges computational neuroscience, data science, and web software development. His career is characterized by a deep-seated passion for problem-solving, whether modeling the complexities of the human brain or building scalable web applications.&lt;/p&gt;&#xA;&lt;p&gt;His journey began with a strong academic foundation in Physics and a Master&amp;rsquo;s degree in Brain &amp;amp; Mind Sciences from the University of Crete. This led to significant research experience at the Foundation for Research and Technology-Hellas (FORTH), where he focused on computational modeling of neural processes, publishing peer-reviewed work on dendritic computations.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

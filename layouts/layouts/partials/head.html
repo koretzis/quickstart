@@ -1,0 +1,30 @@
+<!-- layouts/partials/head.html -->
+
+<!-- This file overrides the theme's head to add our custom elements -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<!-- Title and Meta descriptions -->
+<title>
+    {{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} · {{ .Site.Title }}{{ end }}
+</title>
+{{- with .Description | default .Summary }}
+<meta name="description" content="{{ . }}">
+{{- end }}
+{{- with .Site.Author.name }}
+<meta name="author" content="{{ . }}">
+{{- end }}
+
+<!-- Our new line for icons! -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Main CSS -->
+{{- $mainCSS := resources.Get "css/main.css" | minify -}}
+<link rel="stylesheet" href="{{ $mainCSS.RelPermalink }}">
+
+<!-- Other head elements -->
+{{- partial "head/opengraph.html" . -}}
+{{- partial "head/twitter_cards.html" . -}}
+{{- template "_internal/google_analytics.html" . -}}
+{{- hugo.Generator -}}

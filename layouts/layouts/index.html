@@ -1,0 +1,39 @@
+<!-- layouts/index.html -->
+
+{{ define "main" }}
+
+<div class="container">
+
+  <!-- Simple Navbar -->
+  <nav class="navbar">
+    <ul>
+      {{- range .Site.Menus.main }}
+      <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+      {{- end }}
+    </ul>
+  </nav>
+
+  <!-- Main intro content, centered -->
+  <main class="intro">
+    <div class="intro-content">
+      <h1 class="intro-title">{{ .Site.Title }}</h1>
+      <p class="intro-subtitle">
+        Computational Neuroscientist & Software Engineer. <br> Exploring memory, data, and the code that connects them.
+      </p>
+
+      <!-- Social Links List -->
+      <ul class="social-links">
+        {{- range .Site.Params.socials.list }}
+        <li>
+          <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ .name }}">
+            <i class="{{ .icon }}"></i>
+          </a>
+        </li>
+        {{- end }}
+      </ul>
+    </div>
+  </main>
+
+</div>
+
+{{ end }}

@@ -1,0 +1,33 @@
+baseURL = '/'
+languageCode = 'en-us'
+title = 'Stelios Anastasakis site'
+theme = 'hugo-theme-nightfall'
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    pageRef = "/"
+    weight = 10
+  [[menu.main]]
+    name = "About"
+    pageRef = "/about"
+    weight = 20
+[[menu.main]]
+    name = "CV"
+    url = "/cv.pdf"
+    weight = 30
+
+[params]
+  [params.socials]
+    [[params.socials.list]]
+      name = "LinkedIn"
+      url = "https://linkedin.com/in/stelios-anastasakis"
+      icon = "fab fa-linkedin"
+    [[params.socials.list]]
+      name = "GitHub"
+      url = "https://github.com/koretzis"
+      icon = "fab fa-github"
+    [[params.socials.list]]
+      name = "Email"
+      url = "mailto:anastas.stelios@gmail.com"
+      icon = "fas fa-envelope"
