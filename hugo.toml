@@ -1,7 +1,7 @@
 baseURL = '/'
 languageCode = 'en-us'
 title = 'Stelios Anastasakis site'
-theme = 'hugo-theme-nightfall'
+theme = 'nightfall'
 
 [menu]
   [[menu.main]]
