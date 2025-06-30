@@ -1,0 +1,14 @@
+# Netlify Configuration File
+
+# This section defines the main build settings.
+[build]
+  # The directory to publish after the build is complete. Hugo builds to "public".
+  publish = "public"
+  
+  # The command to run to build your site.
+  command = "hugo --gc --minify"
+
+# This section sets up the build environment.
+[build.environment]
+  # This is the MOST IMPORTANT line. It tells Netlify which version of Hugo to use.
+  HUGO_VERSION = "0.125.7"
